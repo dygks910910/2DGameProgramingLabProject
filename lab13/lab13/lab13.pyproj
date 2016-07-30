@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a0a526dd-717a-4a3c-b962-42b8510eb512</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>mygame.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>lab13</Name>
+    <RootNamespace>lab13</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="background.py" />
+    <Compile Include="ball.py" />
+    <Compile Include="boy.py" />
+    <Compile Include="game_framework.py" />
+    <Compile Include="mygame.py" />
+    <Compile Include="pico2d.py" />
+    <Compile Include="scroll_state.py" />
+    <Compile Include="testBall.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testFunctions.py" />
+    <Compile Include="TUI.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="animation_sheet.png" />
+    <Content Include="ball21x21.png" />
+    <Content Include="ball41x41.png" />
+    <Content Include="blackboard.png" />
+    <Content Include="character.png" />
+    <Content Include="ConsolaMalgun.ttf" />
+    <Content Include="ENCR10B.TTF" />
+    <Content Include="KPU_GROUND.png" />
+    <Content Include="pickup.wav" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
